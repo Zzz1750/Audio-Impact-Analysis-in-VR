@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Impact Analysis</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: white;
+            background-color: black;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #back{
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        #heading{
+            position: absolute;
+            font-size: 2.5rem;
+            left: 5%;
+            top: 5%;
+            opacity: 0.9;
+        }
+        #content{
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            width: 40%;
+            text-align:justify;
+            opacity: 0.8;
+        }
+        #Instruction_head{
+            position: absolute;
+            top: 55%;
+            left: 20%;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        #instruction_points{
+            position: absolute;
+            left: 10%;
+            top: 60%;
+            text-align: justify;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        #view_instruction_button{
+            position: absolute;
+            top: 60%;
+            left: 5%;
+            opacity: 0.5;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #view_instruction_button:hover{
+            opacity: 0.6;
+        }
+        #arrow_icon{
+            font-size: 13px;
+        }
+        #version_control{
+            margin: 0;
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            font-size: 10px;
+            opacity: 0.5;
+            transform: translate(-50%,-50%);
+        }
+
+        #sep{
+            position: absolute;
+            top: 23%;
+            left: 65%;
+            border-radius: 10px;
+            font-size: 22px;
+        }
+        #condition_a_button{
+            position: absolute;
+            top: 30%;
+            left: 65%;
+            padding: 10px 15px;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #condition_b_button{
+            font-size: 15px;
+            position: absolute;
+            top: 38%;
+            left: 65%;
+            padding: 10px 15px;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/main_website_back.jpg" id="back" alt="">
+    <h1 id="heading">A Study on <br><span style="font-size: 3.5rem;">Immersive Experiences</span></h1>
+    <p id="content"><b>Exploring How Different Sensory Environments Influence Engagement and Learning</b>
+        <br>The way we experience digital content can shape our perception, focus, and overall interaction. This study investigates how varying immersive conditions impact engagement and comprehension, offering insights into how different environments affect the user experience.
+        <br><br><br>
+        By participating, you contribute to research that seeks to enhance the way we interact with digital spaces.</p>
+        <p id="view_instruction_button" onclick="showInstruction()">view instructions <span id="arrow_icon">▶</span></p>
+        <div id="instruction" style="display: none;">
+            <h1 id="Instruction_head">INSTRUCTION :</h1>
+            <ul id="instruction_points">
+                <li>Wear your VR headset properly and adjust for clarity.</li>
+                <li>Use the controller & A button to interact with app elements.</li>
+                <li>Take breaks if you feel discomfort or dizziness.</li>
+                <li>If an issue occurs, refresh the app or inform the moderator.</li>
+            </ul>
+        </div>
+    <h1 id="sep">TEST CONDITIONS</h1>
+    <p id="condition_a_button">▶ CONDITION A</p>
+    <p id="condition_b_button">▶ CONDITION B</p>
+
+
+    <p id="version_control">BETA 0.1.3</p>
+
+    <script>
+        function showInstruction() {
+            document.getElementById('instruction').style.display='block';
+            document.getElementById('view_instruction_button').style.display='none';
+        }
+    </script>
+</body>
+</html>
